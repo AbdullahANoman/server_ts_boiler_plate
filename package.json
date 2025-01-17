@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:prod": "node ./dist/server.js",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src eslint.config.mjs ", 
-    "lint:fix": "eslint src eslint.config.mjs --fix "
+    "lint": "eslint src eslint.config.mjs ",
+    "lint:fix": "eslint src eslint.config.mjs --fix ",
+    "format": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\""
   },
   "keywords": [],
   "author": "",
@@ -25,7 +28,11 @@
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
     "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   }

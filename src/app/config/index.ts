@@ -1,8 +1,8 @@
-import dotenv from "dotenv";
-import path from "path";
+import dotenv from 'dotenv';
+import path from 'path';
 
 //NOTE this path.join((process.cwd())) works like you add the env with this directory
-dotenv.config({ path: path.join((process.cwd(), ".env")) });
+dotenv.config({ path: path.join((process.cwd(), '.env')) });
 
 export default {
   port: process.env.PORT,
